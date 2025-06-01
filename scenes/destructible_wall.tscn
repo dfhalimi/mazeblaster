@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxc7sf8rkxjj3"]
+
+[ext_resource type="Script" path="res://scripts/destructible_wall.gd" id="1_ppham"]
+[ext_resource type="Texture2D" uid="uid://cj1jh3e4gbdo6" path="res://assets/sprites/destructible_wall.png" id="1_rsb15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm54c"]
+size = Vector2(66, 66)
+
+[node name="DestructibleWall" type="StaticBody2D" groups=["destructible"]]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_ppham")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jm54c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rsb15")

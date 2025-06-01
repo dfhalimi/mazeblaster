@@ -1,0 +1,42 @@
+extends Node2D
+
+@onready var coin_label := $UI/CoinsLabel
+@onready var level_label := $UI/LevelLabel
+
+@export var next_level: PackedScene
+
+var coins_collected := 0
+var total_coins := 0
+
+func _ready():
+	var coins = get_tree().get_nodes_in_group("coins")
+	total_coins = coins.size()
+	for coin in coins:
+		coin.coin_collected.connect(_on_coin_collected)
+	update_level_label()
+
+func _on_coin_collected():
+	coins_collected += 1
+	coin_label.text = "Coins: %d" % coins_collected
+
+	if coins_collected == total_coins:
+		show_win_message()
+		
+func show_win_message():
+	if next_level:
+		get_tree().change_scene_to_packed(next_level)
+	else:
+		get_tree().change_scene_to_file("res://scenes/ui/win_screen.tscn")
+	
+func kill_player():
+	get_tree().reload_current_scene()
+	
+func update_level_label():
+	var scene_path = get_tree().current_scene.scene_file_path
+	var scene_name = scene_path.get_file().get_basename() # e.g., "level_02"
+
+	var parts = scene_name.split("_")
+	if parts.size() == 2 and parts[0].to_lower() == "level":
+		var level_number = parts[1]
+		var label = level_label
+		label.text = "Level: " + str(int(level_number))
