@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var coin_label := $UI/CoinsLabel
 @onready var level_label := $UI/LevelLabel
+@onready var death_label := $UI/DeathLabel
 
 @export var next_level: PackedScene
 
@@ -14,6 +15,7 @@ func _ready():
 	for coin in coins:
 		coin.coin_collected.connect(_on_coin_collected)
 	update_level_label()
+	update_death_label()
 
 func _on_coin_collected():
 	coins_collected += 1
@@ -28,9 +30,6 @@ func show_win_message():
 	else:
 		get_tree().change_scene_to_file("res://scenes/ui/win_screen.tscn")
 	
-func kill_player():
-	get_tree().reload_current_scene()
-	
 func update_level_label():
 	var scene_path = get_tree().current_scene.scene_file_path
 	var scene_name = scene_path.get_file().get_basename() # e.g., "level_02"
@@ -40,3 +39,8 @@ func update_level_label():
 		var level_number = parts[1]
 		var label = level_label
 		label.text = "Level: " + str(int(level_number))
+		
+func update_death_label():
+	var level_name = get_name()
+	var deaths = GameState.get_death_count(level_name)
+	death_label.text = "Deaths: %d" % deaths

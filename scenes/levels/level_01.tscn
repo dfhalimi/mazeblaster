@@ -307,12 +307,20 @@ theme_override_font_sizes/font_size = 32
 text = "Ammo: 5"
 
 [node name="LevelLabel" type="Label" parent="UI"]
-offset_left = 1008.0
-offset_top = 8.0
-offset_right = 1124.0
-offset_bottom = 53.0
+offset_left = 1027.0
+offset_top = 1.0
+offset_right = 1143.0
+offset_bottom = 46.0
 theme_override_font_sizes/font_size = 32
 text = "Level: 1"
+
+[node name="DeathLabel" type="Label" parent="UI"]
+offset_left = 999.0
+offset_top = 37.0
+offset_right = 1143.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 32
+text = "Deaths: 0"
 
 [node name="Coins" type="Node" parent="."]
 

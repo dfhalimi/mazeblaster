@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7g07aby135u4"]
+[gd_scene load_steps=9 format=3 uid="uid://c7g07aby135u4"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_tx8y8"]
+[ext_resource type="PackedScene" uid="uid://68kmi1kyqhy8" path="res://scenes/levels/level_04.tscn" id="2_pkl0y"]
 [ext_resource type="PackedScene" uid="uid://2ecttgwt8mmi" path="res://scenes/player/player.tscn" id="2_s7u2v"]
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="3_tlx7a"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="4_65rue"]
@@ -11,6 +12,7 @@
 [node name="Level03" type="Node2D"]
 position = Vector2(-8, -8)
 script = ExtResource("1_tx8y8")
+next_level = ExtResource("2_pkl0y")
 
 [node name="Player" parent="." instance=ExtResource("2_s7u2v")]
 position = Vector2(584, 568)
@@ -316,12 +318,20 @@ theme_override_font_sizes/font_size = 32
 text = "Ammo: 5"
 
 [node name="LevelLabel" type="Label" parent="UI"]
-offset_left = 1008.0
-offset_top = 8.0
-offset_right = 1124.0
-offset_bottom = 53.0
+offset_left = 1027.0
+offset_top = 1.0
+offset_right = 1143.0
+offset_bottom = 46.0
 theme_override_font_sizes/font_size = 32
 text = "Level: 1"
+
+[node name="DeathLabel" type="Label" parent="UI"]
+offset_left = 999.0
+offset_top = 37.0
+offset_right = 1143.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 32
+text = "Deaths: 0"
 
 [node name="Coins" type="Node" parent="."]
 

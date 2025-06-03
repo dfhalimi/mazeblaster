@@ -4,3 +4,6 @@
 .import/
 *.import
 export_presets.cfg
+.DS_Store
+web_export/
+web_export.zip

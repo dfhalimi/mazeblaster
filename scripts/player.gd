@@ -44,3 +44,8 @@ func shoot_bullet():
 	
 func update_ammo_ui():
 	ammo_label.text = "Ammo: %d" % ammo
+	
+func kill_player():
+	var level_name = get_tree().current_scene.name
+	GameState.increase_death_count(level_name)
+	get_tree().reload_current_scene()
