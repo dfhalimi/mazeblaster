@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://derntb0dqvsyo"]
+
+[ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="1_h2uf3"]
+[ext_resource type="Script" path="res://scripts/trigger_enemy.gd" id="2_y36tp"]
+[ext_resource type="Texture2D" uid="uid://c328f66d8g0co" path="res://assets/sprites/trigger-enemy.png" id="3_1jx1j"]
+
+[node name="TriggerEnemy" instance=ExtResource("1_h2uf3")]
+script = ExtResource("2_y36tp")
+linked_walls = Array[NodePath]([])
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_1jx1j")

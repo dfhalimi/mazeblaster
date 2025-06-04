@@ -43,7 +43,9 @@ func _flip_direction():
 	direction *= -1
 	start_position = position
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		body.kill_player()
+		
+func die():
+	queue_free()

@@ -8,7 +8,8 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	if body.is_in_group("enemies") or body.is_in_group("destructible"):
+	if body.is_in_group("enemies"):
+		body.die()
+	elif body.is_in_group("destructible"):
 		body.queue_free()
-		
 	queue_free()
