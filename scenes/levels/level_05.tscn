@@ -178,9 +178,6 @@ position = Vector2(-411.998, -311.999)
 [node name="Wall45" parent="Walls/OuterWallBottom2" instance=ExtResource("3_yqc6b")]
 position = Vector2(-411.998, -375.999)
 
-[node name="AmmoPickup" parent="Walls/OuterWallBottom2" instance=ExtResource("4_unncn")]
-position = Vector2(-523.998, 616.002)
-
 [node name="OuterWallTop" type="Node2D" parent="Walls"]
 position = Vector2(712, 0)
 rotation = 1.5708
@@ -540,3 +537,6 @@ position = Vector2(1096, 536)
 
 [node name="AmmoPickup2" parent="." instance=ExtResource("4_unncn")]
 position = Vector2(584, 536)
+
+[node name="AmmoPickup3" parent="." instance=ExtResource("4_unncn")]
+position = Vector2(104, 120)
