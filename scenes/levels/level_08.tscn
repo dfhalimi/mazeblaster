@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b67b420mhln5t" path="res://scenes/ammo_pickup.tscn" id="7_q7k37"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="8_6yprb"]
 
-[node name="Level03" type="Node2D"]
+[node name="Level08" type="Node2D"]
 position = Vector2(-8, -8)
 script = ExtResource("1_rvb7x")
 next_level = ExtResource("2_set4k")
