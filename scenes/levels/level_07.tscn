@@ -78,7 +78,10 @@ position = Vector2(-5.59506e-06, -120)
 position = Vector2(-8.39259e-06, -184)
 
 [node name="Wall32" parent="Walls/OuterWallBottom" instance=ExtResource("4_f4ahm")]
-position = Vector2(-315.999, 328.001)
+position = Vector2(-315.999, 360.001)
+
+[node name="Wall42" parent="Walls/OuterWallBottom" instance=ExtResource("4_f4ahm")]
+position = Vector2(-315.999, 304.001)
 
 [node name="Wall34" parent="Walls/OuterWallBottom" instance=ExtResource("4_f4ahm")]
 position = Vector2(-315.999, 264.001)
@@ -169,7 +172,10 @@ position = Vector2(-1.39876e-05, -312)
 position = Vector2(-1.67852e-05, -376)
 
 [node name="Wall29" parent="Walls/OuterWallTop" instance=ExtResource("4_f4ahm")]
-position = Vector2(64.0012, 328)
+position = Vector2(64.0013, 360)
+
+[node name="Wall41" parent="Walls/OuterWallTop" instance=ExtResource("4_f4ahm")]
+position = Vector2(64.0011, 296)
 
 [node name="Wall30" parent="Walls/OuterWallTop" instance=ExtResource("4_f4ahm")]
 position = Vector2(64.0012, 264)

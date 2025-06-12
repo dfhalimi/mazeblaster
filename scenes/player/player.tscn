@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2ecttgwt8mmi"]
+[gd_scene load_steps=6 format=3 uid="uid://2ecttgwt8mmi"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6mw7m"]
 [ext_resource type="Texture2D" uid="uid://c5o4ne7q1w7ye" path="res://assets/sprites/placeholder_player.png" id="2_l0en7"]
@@ -7,6 +7,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_u7spc"]
 radius = 25.0
 
+[sub_resource type="Gradient" id="Gradient_v8iq4"]
+colors = PackedColorArray(0.548667, 0.683349, 0.566721, 0.784314, 1, 1, 1, 0)
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 10
 script = ExtResource("1_6mw7m")
@@ -14,6 +17,12 @@ bullet_scene = ExtResource("2_xysqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_u7spc")
+
+[node name="AimLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0)
+width = 6.0
+gradient = SubResource("Gradient_v8iq4")
+begin_cap_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_l0en7")
