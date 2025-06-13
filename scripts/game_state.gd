@@ -9,6 +9,8 @@ extends Node
 @onready var trigger_wall_disappear_player := AudioStreamPlayer.new()
 @onready var enemy_hit_player := AudioStreamPlayer.new()
 
+@onready var music_player := AudioStreamPlayer.new()
+
 var deaths_per_level := {}
 var total_deaths := 0
 
@@ -30,7 +32,7 @@ func _ready():
 	
 	add_child(win_level_player)
 	win_level_player.stream = preload("res://sfx/win_level.mp3")
-	win_level_player.volume_db = -15
+	win_level_player.volume_db = -10
 	win_level_player.bus = "SFX"
 	
 	add_child(wall_break_player)
@@ -50,8 +52,13 @@ func _ready():
 	
 	add_child(enemy_hit_player)
 	enemy_hit_player.stream = preload("res://sfx/enemy_hit.mp3")
-	enemy_hit_player.volume_db = -5
+	enemy_hit_player.volume_db
 	enemy_hit_player.bus = "SFX"
+	
+	add_child(music_player)
+	music_player.stream = preload("res://assets/music/main_theme.mp3")
+	music_player.volume_db = -15
+	enemy_hit_player.bus = "Music"
 
 func increase_death_count(level_name: String):
 	if not deaths_per_level.has(level_name):
@@ -95,3 +102,6 @@ func play_trigger_wall_disappear_sound():
 	
 func play_enemy_hit_sound():
 	enemy_hit_player.play()
+	
+func start_main_theme():
+	music_player.play()

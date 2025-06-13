@@ -288,6 +288,26 @@ text = "Deaths: 0"
 
 [node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_qn0vd")]
 
+[node name="MoveInstructionLabel" type="Label" parent="UI"]
+offset_left = 128.0
+offset_top = 248.0
+offset_right = 344.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 32
+text = "W/A/S/D  or Arrow Keys to move"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PauseInstructionLabel" type="Label" parent="UI"]
+offset_left = 832.0
+offset_top = 272.0
+offset_right = 1048.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 32
+text = "P to Pause Game"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_d7pm8")]
