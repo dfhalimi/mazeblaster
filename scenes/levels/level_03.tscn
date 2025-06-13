@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0h0ogq80awpj"]
+[gd_scene load_steps=9 format=3 uid="uid://c0h0ogq80awpj"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_tx8y8"]
 [ext_resource type="PackedScene" uid="uid://bkg0ecsjh14v4" path="res://scenes/levels/level_04.tscn" id="2_pkl0y"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="3_tlx7a"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="4_65rue"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="5_fdff8"]
+[ext_resource type="PackedScene" uid="uid://dr5sw32m5xnnx" path="res://scenes/ui/pause_screen.tscn" id="5_no7rd"]
+[ext_resource type="PackedScene" uid="uid://dgmd17e2fubkg" path="res://scenes/ui/pause_settings_screen.tscn" id="6_cxhy8"]
 
 [node name="Level03" type="Node2D"]
 position = Vector2(-8, -8)
@@ -333,6 +335,10 @@ offset_right = 1143.0
 offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("5_no7rd")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("6_cxhy8")]
 
 [node name="Coins" type="Node" parent="."]
 

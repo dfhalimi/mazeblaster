@@ -1,14 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpwqybuilhirh"]
+[gd_scene load_steps=13 format=3 uid="uid://cpwqybuilhirh"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_btfro"]
 [ext_resource type="PackedScene" uid="uid://rkjkt5jpedc5" path="res://scenes/levels/level_10.tscn" id="2_kqxqp"]
 [ext_resource type="PackedScene" uid="uid://2ecttgwt8mmi" path="res://scenes/player/player.tscn" id="3_g2sc6"]
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="4_5e5bh"]
 [ext_resource type="PackedScene" uid="uid://cxc7sf8rkxjj3" path="res://scenes/destructible_wall.tscn" id="5_pd1og"]
+[ext_resource type="PackedScene" uid="uid://dr5sw32m5xnnx" path="res://scenes/ui/pause_screen.tscn" id="6_l8e18"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="6_n31xn"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="7_fomla"]
+[ext_resource type="PackedScene" uid="uid://dgmd17e2fubkg" path="res://scenes/ui/pause_settings_screen.tscn" id="7_utsqr"]
 [ext_resource type="PackedScene" uid="uid://derntb0dqvsyo" path="res://scenes/trigger_enemy.tscn" id="8_0bwxh"]
 [ext_resource type="PackedScene" uid="uid://b67b420mhln5t" path="res://scenes/ammo_pickup.tscn" id="9_gq88j"]
+
+[sub_resource type="GDScript" id="GDScript_d45ut"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Level09" type="Node2D"]
 position = Vector2(-8, -8)
@@ -315,9 +331,11 @@ position = Vector2(0, 8)
 
 [node name="DestructibleWall2" parent="Walls/OuterWallRight" instance=ExtResource("5_pd1og")]
 position = Vector2(-640, 264)
+script = SubResource("GDScript_d45ut")
 
 [node name="DestructibleWall3" parent="Walls/OuterWallRight" instance=ExtResource("5_pd1og")]
 position = Vector2(-640, 520)
+script = SubResource("GDScript_d45ut")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -351,6 +369,10 @@ offset_right = 1144.0
 offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("6_l8e18")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("7_utsqr")]
 
 [node name="Coins" type="Node" parent="."]
 

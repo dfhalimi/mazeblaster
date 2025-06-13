@@ -4,6 +4,8 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.name == "Player":
+		GameState.play_ammo_pickup_sound()
+		
 		body.ammo += ammo_amount
 		body.update_ammo_ui()
 		queue_free()

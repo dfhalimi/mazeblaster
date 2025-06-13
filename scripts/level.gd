@@ -18,10 +18,13 @@ func _ready():
 	update_death_label()
 
 func _on_coin_collected():
+	GameState.play_coin_collect_sound()
+	
 	coins_collected += 1
 	coin_label.text = "Coins: %d" % coins_collected
 
 	if coins_collected == total_coins:
+		GameState.play_win_level_sound()
 		show_win_message()
 		
 func show_win_message():

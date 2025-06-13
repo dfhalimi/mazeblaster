@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://2ecttgwt8mmi"]
+[gd_scene load_steps=8 format=3 uid="uid://2ecttgwt8mmi"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6mw7m"]
 [ext_resource type="Texture2D" uid="uid://c5o4ne7q1w7ye" path="res://assets/sprites/placeholder_player.png" id="2_l0en7"]
 [ext_resource type="PackedScene" uid="uid://vorwk6vq5nxh" path="res://scenes/bullet.tscn" id="2_xysqx"]
+[ext_resource type="AudioStream" uid="uid://nkc4fs1nni2q" path="res://sfx/shoot.mp3" id="4_mv2cs"]
+[ext_resource type="AudioStream" uid="uid://d1phgwxencefn" path="res://sfx/empty_clip.mp3" id="5_ji13o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u7spc"]
 radius = 25.0
@@ -26,3 +28,11 @@ begin_cap_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_l0en7")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mv2cs")
+bus = &"SFX"
+
+[node name="EmptyClipSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ji13o")
+bus = &"SFX"

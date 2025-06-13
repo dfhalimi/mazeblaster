@@ -1,13 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddbk3rxtphwhc"]
+[gd_scene load_steps=12 format=3 uid="uid://ddbk3rxtphwhc"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_4706v"]
 [ext_resource type="PackedScene" uid="uid://c2r3sfkt1jsn5" path="res://scenes/levels/level_07.tscn" id="2_ndjls"]
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="3_62v0u"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="4_dex7p"]
+[ext_resource type="PackedScene" uid="uid://dr5sw32m5xnnx" path="res://scenes/ui/pause_screen.tscn" id="4_eeqtd"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="5_30ssb"]
+[ext_resource type="PackedScene" uid="uid://dgmd17e2fubkg" path="res://scenes/ui/pause_settings_screen.tscn" id="5_rvspm"]
 [ext_resource type="PackedScene" uid="uid://2ecttgwt8mmi" path="res://scenes/player/player.tscn" id="6_86b3i"]
 [ext_resource type="PackedScene" uid="uid://b67b420mhln5t" path="res://scenes/ammo_pickup.tscn" id="7_2pwuy"]
 [ext_resource type="PackedScene" uid="uid://cxc7sf8rkxjj3" path="res://scenes/destructible_wall.tscn" id="7_qyfek"]
+
+[sub_resource type="GDScript" id="GDScript_d45ut"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Level06" type="Node2D"]
 position = Vector2(-8, -8)
@@ -339,6 +355,10 @@ offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
 
+[node name="PauseScreen" parent="UI" instance=ExtResource("4_eeqtd")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_rvspm")]
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin22" parent="Coins" instance=ExtResource("4_dex7p")]
@@ -416,12 +436,15 @@ position = Vector2(584, 72)
 
 [node name="DestructibleWall" parent="." instance=ExtResource("7_qyfek")]
 position = Vector2(584, 200)
+script = SubResource("GDScript_d45ut")
 
 [node name="DestructibleWall2" parent="." instance=ExtResource("7_qyfek")]
 position = Vector2(264, 200)
+script = SubResource("GDScript_d45ut")
 
 [node name="DestructibleWall3" parent="." instance=ExtResource("7_qyfek")]
 position = Vector2(200, 432)
+script = SubResource("GDScript_d45ut")
 
 [node name="AmmoPickup" parent="." instance=ExtResource("7_2pwuy")]
 position = Vector2(584, 416)

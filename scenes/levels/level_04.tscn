@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkg0ecsjh14v4"]
+[gd_scene load_steps=10 format=3 uid="uid://bkg0ecsjh14v4"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_mba80"]
 [ext_resource type="PackedScene" uid="uid://debslkvoms3ep" path="res://scenes/levels/level_05.tscn" id="2_s6omj"]
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="3_wncdx"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="4_wl7cg"]
+[ext_resource type="PackedScene" uid="uid://dr5sw32m5xnnx" path="res://scenes/ui/pause_screen.tscn" id="5_83fw6"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="5_p12t4"]
+[ext_resource type="PackedScene" uid="uid://dgmd17e2fubkg" path="res://scenes/ui/pause_settings_screen.tscn" id="6_mp4u2"]
 [ext_resource type="PackedScene" uid="uid://2ecttgwt8mmi" path="res://scenes/player/player.tscn" id="6_vcx08"]
 [ext_resource type="PackedScene" uid="uid://b67b420mhln5t" path="res://scenes/ammo_pickup.tscn" id="7_atkqb"]
 
@@ -319,6 +321,10 @@ offset_right = 1143.0
 offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("5_83fw6")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("6_mp4u2")]
 
 [node name="Coins" type="Node" parent="."]
 

@@ -48,4 +48,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.kill_player()
 		
 func die():
+	GameState.play_enemy_hit_sound()
 	queue_free()

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dai586mu7fbmu"]
+[gd_scene load_steps=9 format=3 uid="uid://dai586mu7fbmu"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_nn2x4"]
 [ext_resource type="PackedScene" uid="uid://c0h0ogq80awpj" path="res://scenes/levels/level_03.tscn" id="2_qhq1x"]
 [ext_resource type="PackedScene" uid="uid://cal42ude5ppt8" path="res://scenes/wall.tscn" id="3_kxui7"]
 [ext_resource type="PackedScene" uid="uid://cbigq4rmrbr4o" path="res://scenes/coin.tscn" id="4_n7lfk"]
+[ext_resource type="PackedScene" uid="uid://dr5sw32m5xnnx" path="res://scenes/ui/pause_screen.tscn" id="4_q7dk4"]
+[ext_resource type="PackedScene" uid="uid://dgmd17e2fubkg" path="res://scenes/ui/pause_settings_screen.tscn" id="5_6c68w"]
 [ext_resource type="PackedScene" uid="uid://2ecttgwt8mmi" path="res://scenes/player/player.tscn" id="5_bvadp"]
 [ext_resource type="PackedScene" uid="uid://dglpt6aqsx42k" path="res://scenes/enemy.tscn" id="6_3q67m"]
 
@@ -339,6 +341,10 @@ offset_right = 1143.0
 offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("4_q7dk4")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_6c68w")]
 
 [node name="Coins" type="Node" parent="."]
 
