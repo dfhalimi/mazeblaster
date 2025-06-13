@@ -342,10 +342,6 @@ offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
 
-[node name="PauseScreen" parent="UI" instance=ExtResource("4_q7dk4")]
-
-[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_6c68w")]
-
 [node name="ShootLabel" type="Label" parent="UI"]
 offset_left = 80.0
 offset_top = 504.0
@@ -362,6 +358,10 @@ offset_bottom = 549.0
 theme_override_font_sizes/font_size = 32
 text = "R to Restart"
 horizontal_alignment = 1
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("4_q7dk4")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_6c68w")]
 
 [node name="Coins" type="Node" parent="."]
 

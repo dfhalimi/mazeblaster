@@ -15,6 +15,8 @@ var deaths_per_level := {}
 var total_deaths := 0
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+		
 	add_child(death_player)
 	death_player.stream = preload("res://sfx/player_death.mp3")
 	death_player.volume_db = -15
@@ -58,7 +60,7 @@ func _ready():
 	add_child(music_player)
 	music_player.stream = preload("res://assets/music/main_theme.mp3")
 	music_player.volume_db = -15
-	enemy_hit_player.bus = "Music"
+	music_player.bus = "Music"
 
 func increase_death_count(level_name: String):
 	if not deaths_per_level.has(level_name):

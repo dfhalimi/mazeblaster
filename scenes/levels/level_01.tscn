@@ -284,10 +284,6 @@ offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "Deaths: 0"
 
-[node name="PauseScreen" parent="UI" instance=ExtResource("4_e0mxn")]
-
-[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_qn0vd")]
-
 [node name="MoveInstructionLabel" type="Label" parent="UI"]
 offset_left = 128.0
 offset_top = 248.0
@@ -307,6 +303,10 @@ theme_override_font_sizes/font_size = 32
 text = "P to Pause Game"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="PauseScreen" parent="UI" instance=ExtResource("4_e0mxn")]
+
+[node name="PauseSettingsScreen" parent="UI" instance=ExtResource("5_qn0vd")]
 
 [node name="Coins" type="Node" parent="."]
 
