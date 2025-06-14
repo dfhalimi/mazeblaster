@@ -21,10 +21,10 @@ func open():
 	title_label.visible = true
 	start_button.visible = true
 	settings_button.visible = true
-	quit_button.visible = true
+	#quit_button.visible = true
 	
 func close():
 	title_label.visible = false
 	start_button.visible = false
 	settings_button.visible = false
-	quit_button.visible = false
+	#quit_button.visible = false
