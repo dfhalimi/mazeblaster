@@ -59,7 +59,7 @@ func _ready():
 	
 	add_child(music_player)
 	music_player.stream = preload("res://assets/music/main_theme.mp3")
-	music_player.volume_db = -15
+	music_player.volume_db = -20
 	music_player.bus = "Music"
 
 func increase_death_count(level_name: String):

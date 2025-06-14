@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b67b420mhln5t"]
 
-[ext_resource type="Texture2D" uid="uid://ba75kgr62h3cv" path="res://assets/sprites/ammo-pickup.png" id="1_0kp07"]
 [ext_resource type="Script" path="res://scripts/ammo_pickup.gd" id="1_gpubu"]
+[ext_resource type="Texture2D" uid="uid://do4aksqiyc3oa" path="res://assets/sprites/ammo-pickup_new.png" id="2_jse4b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fpdo"]
 radius = 20.025
@@ -13,6 +13,6 @@ script = ExtResource("1_gpubu")
 shape = SubResource("CircleShape2D_2fpdo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_0kp07")
+texture = ExtResource("2_jse4b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
