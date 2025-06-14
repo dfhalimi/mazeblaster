@@ -523,12 +523,12 @@ patrol_distance = 500.0
 initial_direction = 2
 
 [node name="Enemy7" parent="Enemies" instance=ExtResource("5_ddnae")]
-position = Vector2(280, 64)
+position = Vector2(272, 64)
 patrol_distance = 500.0
 initial_direction = 3
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource("5_ddnae")]
-position = Vector2(160, 160)
+position = Vector2(152, 160)
 patrol_distance = 500.0
 initial_direction = 2
 
@@ -551,4 +551,4 @@ position = Vector2(1096, 536)
 position = Vector2(584, 536)
 
 [node name="AmmoPickup3" parent="." instance=ExtResource("7_vrx32")]
-position = Vector2(104, 120)
+position = Vector2(96, 120)
