@@ -107,3 +107,6 @@ func play_enemy_hit_sound():
 	
 func start_main_theme():
 	music_player.play()
+	
+func stop_main_theme():
+	music_player.stop()

@@ -38,5 +38,6 @@ func _on_settings_button_pressed() -> void:
 
 func _on_back_to_main_menu_button_pressed() -> void:
 	GameState.reset_death_count()
+	GameState.stop_main_theme()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
